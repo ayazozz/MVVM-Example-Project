@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="flag_img_height">24dp</dimen>
+    <dimen name="flag_img_width">48dp</dimen>
+    <dimen name="text_size">16dp</dimen>
+</resources>

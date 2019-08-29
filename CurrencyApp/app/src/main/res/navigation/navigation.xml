@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation" app:startDestination="@id/welcomeFragment">
+
+    <fragment android:id="@+id/welcomeFragment" android:name="com.example.currencyapp.welcome.WelcomeFragment"
+              android:label="WelcomeFragment"
+              tools:layout="@layout/fragment_welcome">
+        <action android:id="@+id/navigateToCurrencyListAction"
+                app:destination="@id/currencyListFragment" app:popUpTo="@+id/welcomeFragment"
+        />
+    </fragment>
+    <fragment android:id="@+id/currencyListFragment"
+              android:name="com.example.currencyapp.currencyList.CurrencyListFragment"
+              android:label="CurrencyListFragment"
+              tools:layout="@layout/fragment_currency_list">
+        <action android:id="@+id/action_currencyListFragment_to_currencyDetailsFragment"
+                app:destination="@id/currencyDetailsFragment"/>
+    </fragment>
+    <fragment android:id="@+id/currencyDetailsFragment"
+              android:name="com.example.currencyapp.currencyDetails.CurrencyDetailsFragment"
+              android:label="CurrencyDetailsFragment"
+              tools:layout="@layout/currency_detail_layout">
+        <argument android:name="currency" app:argType="string"/>
+        <argument android:name="tabList" app:argType="string[]"/>
+    </fragment>
+
+
+</navigation>
