@@ -7,6 +7,8 @@ This mobile application views currencies list of 33 countries. Furthermore, the 
 - Livedata
 - Databinding
 - Navigation
+- ViewPager
+- Tablayout
 
 ###  The flow Schema Of Recipes Application
 
