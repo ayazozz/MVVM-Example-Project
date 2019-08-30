@@ -14,10 +14,6 @@ The „ApiService“ class is created to do api request. This class includes one
 - CurrencyData
 - Rates
 
-#### ** Note 1 
-
-Get all currency list api doesn’t include „EUR“ currency rate value. That’s why, after request, this value should add to response list
-
 ## Activities - Fragment- Classes
 
 When the project create, MVVM design pattern is usedBecause, we care about that when the screen rotates, it maintains the latest status and keeps information on the screen. Viewmodel layer and observable data that live data provides to do that because, they are
@@ -33,7 +29,7 @@ Its for launcher screen. At the same time, it’s a starter fargment of app. It 
 This fragment lists currency list. There is a binding object to provide connection ui by using databinding. CurrencyListViewModel object is created by factory. It provides to us singleten feature. This fragment observes the changing and livedata values such as search value, send „getList“ request.Visibility of search text has animation. If the user scroll screen up, search text is visible, if
 the user scroll screen down, it will be unvisible.
 
-#### ** NOT2 
+#### ** NOT 1 
 
 Fragement does all of stuff in the „onCreateView“ function. That’s why, getList function hast to invoke from „onResume“ function to view whole list when user come back to this fragment screen after doing search.
 
@@ -52,7 +48,7 @@ value to adapter.
 This fragment views details of currency rates of each currencies by used viewpager and tablayout. It takes 2 params. First one is currency name of clicked by user on previous screen, second one is currencyList for tabs text of tablayout. In the same way, it includes
 binding and viewmodel objects.
 
-#### **NOT3 
+#### **NOT 2 
 
 The value that requets parameter is set from livedata or fragment args to save state in rotation case. If the livedata is null, it means the fragment is creating first time, if not, the fragment is already exist, so, request param is should be live data calue.
 
