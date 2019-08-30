@@ -21,7 +21,7 @@ The „ApiService“ class is created to do api request. This class includes one
 - CurrencyData
 - Rates
 
-## Activities - Fragment- Classes
+## Activities - Fragments- Classes
 
 When the project create, MVVM design pattern is usedBecause, we care about that when the screen rotates, it maintains the latest status and keeps information on the screen. Viewmodel layer and observable data that live data provides to do that because, they are
 lifecycle awareness structures.
